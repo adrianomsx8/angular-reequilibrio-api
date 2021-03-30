@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Terapeutas } from '../terapeutas';
-import { TerapeutasService } from '../terapeutas.service';
+import { Terapeuta } from '../terapeuta';
+import { TerapeutaService } from '../terapeuta.service';
 
 @Component({
   selector: 'app-terapeutas',
@@ -9,12 +9,12 @@ import { TerapeutasService } from '../terapeutas.service';
 })
 export class TerapeutasComponent implements OnInit {
 
-  public terapeuta!: Terapeutas;
+  public terapeutas:Terapeuta[] | undefined;
 
-  constructor(private TerapeutasService: TerapeutasService) { }
+  constructor(private TerapeutaService: TerapeutaService) { }
 
   ngOnInit(): void {
-    this.terapeuta = this.TerapeutasService.getTerapeuta();
+    this.terapeutas = this.TerapeutaService.listaTerapeuta();
   }
 
 }

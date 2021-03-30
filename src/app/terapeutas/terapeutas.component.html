@@ -1,8 +1,12 @@
-<p>terapeutas works!</p>
-<div>
-    Nome do terapeuta: 
-</div>
+<table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+        <tr *ngFor="let terapeuta of terapeutas;">
+            <td>{{terapeuta.nome}}</td>
+            <td>{{terapeuta.email}}</td>
+        </tr>
+    </table>
 
-<div>
-    {{terapeuta.nome}}
-</div>
+<button routerLink="add">Add</button>

@@ -1,5 +1,5 @@
-export class Terapeutas {
-
+export class Terapeuta {
+    
     public nome:string;
     public email:string;
 
@@ -7,4 +7,5 @@ export class Terapeutas {
         this.nome = ""
         this.email = ""
     }
+
 }

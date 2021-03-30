@@ -13,6 +13,10 @@ const routes: Routes = [
    loadChildren: () => import('./terapeutas/terapeutas.module').then(m => m.TerapeutasModule)
   },
   {
+    path: 'estados',
+   loadChildren: () => import('./estados/estados.module').then(m => m.EstadosModule)
+  },
+  {
     path : '', 
     pathMatch: 'full',
     redirectTo:'/home'
