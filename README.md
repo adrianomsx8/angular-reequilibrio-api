@@ -4,7 +4,7 @@ Angular: 11.2.4
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
-##PRIMENG
+## PRIMENG
 https://primefaces.org/primeng/showcase/#/setup
 npm install primeng --save
 npm install primeicons --save
