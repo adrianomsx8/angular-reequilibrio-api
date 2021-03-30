@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { EstadosService } from './estados.service';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MenubarModule} from 'primeng/menubar';
+
 
 
 @NgModule({
@@ -19,8 +22,10 @@ import { EstadosService } from './estados.service';
   imports: [
     BrowserModule,
     RouterModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MenubarModule
   ],
   providers: [EstadosService],
   bootstrap: [AppComponent]

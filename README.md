@@ -4,6 +4,12 @@ Angular: 11.2.4
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
+##PRIMENG
+https://primefaces.org/primeng/showcase/#/setup
+npm install primeng --save
+npm install primeicons --save
+npm install @angular/animations --save
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
