@@ -5,10 +5,10 @@ Angular: 11.2.4
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
 
 ## PRIMENG
-https://primefaces.org/primeng/showcase/#/setup
-npm install primeng --save
-npm install primeicons --save
-npm install @angular/animations --save
+https://primefaces.org/primeng/showcase/#/setup<br>
+npm install primeng --save <br>
+npm install primeicons --save<br>
+npm install @angular/animations --save<br>
 
 ## Development server
 
