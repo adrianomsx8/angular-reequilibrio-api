@@ -4,7 +4,9 @@ import { TerapeutasComponent } from './terapeutas.component';
 import { TerapeutasRoutingModule } from './terapeutas.routing.module';
 import { TerapeutaCadastroComponent } from './cadastro/terapeuta-cadastro.component';
 import { FormsModule } from '@angular/forms';
-
+import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
 
 
 @NgModule({
@@ -12,7 +14,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     TerapeutasRoutingModule,
-    FormsModule
+    FormsModule,
+    TableModule,
+    ButtonModule,
+    InputTextModule
   ]
 })
 export class TerapeutasModule { }

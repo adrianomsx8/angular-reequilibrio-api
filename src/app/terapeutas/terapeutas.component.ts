@@ -9,7 +9,7 @@ import { TerapeutaService } from '../terapeuta.service';
 })
 export class TerapeutasComponent implements OnInit {
 
-  public terapeutas:Terapeuta[] | undefined;
+  public terapeutas: Terapeuta[] = [];
 
   constructor(private TerapeutaService: TerapeutaService) { }
 

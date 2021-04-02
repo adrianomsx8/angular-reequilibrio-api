@@ -1,12 +1,17 @@
-<table border="1">
+<p-table [value]="terapeutas">
+    <ng-template pTemplate="header">
         <tr>
             <th>Nome</th>
             <th>Email</th>
         </tr>
-        <tr *ngFor="let terapeuta of terapeutas;">
+    </ng-template>
+    <ng-template pTemplate="body" let-terapeuta>
+        <tr>
             <td>{{terapeuta.nome}}</td>
             <td>{{terapeuta.email}}</td>
         </tr>
-    </table>
+    </ng-template>
+</p-table>
 
-<button routerLink="add">Add</button>
+
+<button pButton  routerLink="add" label="add"></button>
