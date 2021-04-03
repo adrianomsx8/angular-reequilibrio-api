@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Terapeuta } from './terapeuta';
 
 @Injectable({
@@ -6,7 +8,12 @@ import { Terapeuta } from './terapeuta';
 })
 export class TerapeutaService {
 
-  constructor() { }
+  private url = 'http://127.0.0.1:8000/api/terapeutas';
+  constructor(private http:HttpClient) { }
+
+  public salvar(terapeuta:Terapeuta):Observable<Terapeuta>{
+    return this.http.post<Terapeuta>(this.url, terapeuta)
+  }
 
   public getTerapeuta(): Terapeuta {
     let terapeuta = new Terapeuta();
@@ -16,29 +23,7 @@ export class TerapeutaService {
     return terapeuta;
   }
 
- public listaTerapeuta(): Terapeuta[] {
-
-  return [
-      {
-        nome : "Adriano",
-        email: "adriano.msx8@gmail.com"
-      },
-      {
-        nome : "Maria",
-        email: "maria.paiva@gmail.com"
-      },
-      {
-        nome : "Laura",
-        email: "laura.paiva@gmail.com"
-      },
-      {
-        nome : "Joaquim",
-        email: "joaquim.santos@gmail.com"
-      }
-    ];
-
+ public listaTerapeuta():Observable<Terapeuta[]> {
+   return  this.http.get<Terapeuta[]>(this.url);
   }
-
- 
-
 }

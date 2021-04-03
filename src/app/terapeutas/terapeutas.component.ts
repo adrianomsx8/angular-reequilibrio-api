@@ -14,7 +14,15 @@ export class TerapeutasComponent implements OnInit {
   constructor(private TerapeutaService: TerapeutaService) { }
 
   ngOnInit(): void {
-    this.terapeutas = this.TerapeutaService.listaTerapeuta();
+    //this.terapeutas = this.TerapeutaService.listaTerapeuta();
+    this.TerapeutaService.listaTerapeuta().subscribe(
+      response => {
+        this.terapeutas = response
+      },
+      error => {
+        alert('ocorreu um erro ao listar');
+      }
+    )
   }
 
 }
