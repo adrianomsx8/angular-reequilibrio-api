@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Terapeuta } from './terapeuta';
 
 @Injectable({
@@ -8,7 +9,8 @@ import { Terapeuta } from './terapeuta';
 })
 export class TerapeutaService {
 
-  private url = 'http://127.0.0.1:8000/api/terapeutas';
+   private url = environment.host + "terapeutas";
+
   constructor(private http:HttpClient) { }
 
   public salvar(terapeuta:Terapeuta):Observable<Terapeuta>{
