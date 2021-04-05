@@ -25,6 +25,10 @@ export class TerapeutaService {
     return terapeuta;
   }
 
+  public delete(id:string):Observable<any>{
+    return this.http.delete(this.url + "/" + id)
+  }
+
  public listaTerapeuta():Observable<Terapeuta[]> {
    return  this.http.get<Terapeuta[]>(this.url);
   }

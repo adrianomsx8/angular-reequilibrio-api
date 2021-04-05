@@ -3,15 +3,23 @@
         <tr>
             <th>Nome</th>
             <th>Email</th>
+            <th>Ações</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-terapeuta>
         <tr>
             <td>{{terapeuta.nome}}</td>
             <td>{{terapeuta.email}}</td>
+            <td>
+                <button pButton  (click)="deletar(terapeuta.id)" label="Deletar"></button>
+            </td>
         </tr>
     </ng-template>
 </p-table>
-
-
 <button pButton  routerLink="add" label="add"></button>
+<p-confirmDialog #cd header="Atenção" icon="pi pi-exclamation-triangle">
+    <p-footer>
+        <button type="button" pButton icon="pi pi-times" label="Não" (click)="cd.reject()"></button>
+        <button type="button" pButton icon="pi pi-check" label="Sim" (click)="cd.accept()"></button>
+    </p-footer>
+</p-confirmDialog>

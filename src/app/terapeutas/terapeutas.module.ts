@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
-
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
 
 @NgModule({
   declarations: [TerapeutasComponent, TerapeutaCadastroComponent],
@@ -17,7 +17,8 @@ import {InputTextModule} from 'primeng/inputtext';
     FormsModule,
     TableModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    ConfirmDialogModule
   ]
 })
 export class TerapeutasModule { }
